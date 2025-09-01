@@ -1,6 +1,3 @@
-from selectors import SelectSelector
-
-from setuptools.command.build_ext import if_dl
 
 N = int(input().strip())
 
