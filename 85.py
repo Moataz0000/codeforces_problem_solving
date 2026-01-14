@@ -1,28 +1,19 @@
 
 
-def get_length(arr: list) -> int:
-    counter = 0
-    for x in arr:
-        counter += 1
-    return counter
 
 def get_max(arr: list) -> int:
-    random = arr[0]
-    for i in range(get_length(arr)):
-        if arr[i] > random:
-            random = arr[i]
-        else:
-            continue
-    return random
+    max_val = arr[0]
+    for x in arr:
+        if x > max_val:
+            max_val = x
+    return max_val
 
 def get_min(arr: list) -> int:
-    random = arr[0]
-    for j in range(get_length(arr)):
-        if arr[j] < random:
-            random = arr[j]
-        else:
-            continue
-    return random
+    min_val = arr[0]
+    for x in arr:
+        if x < min_val:
+            min_val = x
+    return min_val
 
 def get_prime(arr: list) -> int:
     def is_prime(num: int) -> bool:
@@ -56,7 +47,7 @@ def get_palindrome(arr: list) -> int:
 def get_max_divisors(arr: list) -> int:
     def count_divisore(num: int) -> int:
         counter: int = 0
-        for n in range(1, num):
+        for n in range(1, num + 1):
             if num % n == 0:
                 counter += 1
         return counter
