@@ -42,14 +42,16 @@ def get_palindrome(arr: list) -> int:
         if is_palindrome(n):
             counter += 1
     return counter
-
     
 def get_max_divisors(arr: list) -> int:
     def count_divisore(num: int) -> int:
         counter: int = 0
-        for n in range(1, num + 1):
+        for n in range(1, int(num**0.5) + 1):
             if num % n == 0:
-                counter += 1
+                if n * n == num:
+                    counter += 1
+                else:
+                    counter += 2
         return counter
     
     max_divs: int = -1
