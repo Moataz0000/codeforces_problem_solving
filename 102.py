@@ -2,11 +2,13 @@
 
 
 
+
+
 def arr_coloring(arr: list):
-    result = 0
+    sum_of_arr = 0
     for i in arr:
-        result += i
-    if result % 2 == 0:
+        sum_of_arr += i
+    if sum_of_arr % 2 == 0:
         print("YES")
     else:
         print("NO")
@@ -19,4 +21,4 @@ while t:
     arr_coloring(a)
     t -= 1
 
-    
+
