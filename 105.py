@@ -1,7 +1,7 @@
 
 
 
-def next_round(arr: list, k: int):
+def next_round(arr: list, k: int) -> int:
     k_th = arr[k-1]
 
     counter = 0
