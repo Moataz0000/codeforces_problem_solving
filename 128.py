@@ -21,5 +21,4 @@ def queue_swapping() -> str:
                 i += 1  
     print("".join(s))
     
-
-solve_problem()
+queue_swapping()
