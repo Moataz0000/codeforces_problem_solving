@@ -28,3 +28,12 @@ def find_pair_with_sum(arr: list, target: int) -> bool:
     return False
 
 print(find_pair_with_sum(arr=[1,2,3], target=3))
+
+
+
+
+
+
+
+
+
