@@ -1,30 +1,12 @@
 
 
-def lottery() -> int:
-    n = int(input())
+def lottery_greedy(n: int) -> int:
+    coins = [100, 20, 10, 5, 1]
+    count = 0
 
-    counter = 0
-    
-    total_100 = n // 100
-    counter += total_100
-    n %= 100
+    for coin in coins:
+        count += n // coin
+        n %= coin
+    return count
 
-    total = n // 20
-    counter += total
-    n %= 20
-
-    total = n // 10
-    counter += total
-    n %= 10
-
-    total = n // 5
-    counter += total
-    n %= 5
-
-    total = n // 1
-    counter += total
-    n %= 1
-
-    return counter
-
-print(lottery())
+print(lottery_greedy(n=125))
